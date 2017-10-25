@@ -28,12 +28,12 @@ const contarNotas = (valor, notaAtual) => {
 
     if(novoValor === 1){
         totalNotas = totalNotas - 1;
-        novoValor = notaAtual + 1;
+        novoValor = notaAtual + novoValor;
     }
 
     if(novoValor === 3){
         totalNotas = totalNotas - 1;
-        novoValor = notaAtual + 3;
+        novoValor = notaAtual + novoValor;
     }
 
     return {
