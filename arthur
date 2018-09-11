@@ -1,0 +1,51 @@
+# -*- coding: utf-8 -*-
+"""
+
+
+@author: arthur
+"""
+
+from math import *
+from string import *
+
+#VALOR A SER DIGITADO PARA SAQUE 
+saque = int(input('Digite o valor que quer sacar: '))
+
+#QUANTIDADE MAXIMA DE NOTAS DE 100 Q PODEM SER SACADAS 
+#A SOBRA QUE SERA DISTRIBUIDA ENTRE AS OUTRAS NOTAS 
+N100 = int(saque / 100)
+rst = saque % 100
+
+N50 = int(rst / 50)
+rst = rst % 50
+
+N20 = int(rst / 20)
+rst = rst % 20
+
+N10 = int(rst / 10)
+rst = rst % 10
+
+N5 = int(rst / 5)
+rst = rst % 5
+
+N2 = int(rst / 2)
+rst = rst % 2
+
+N1 = int(rst / 1)
+rst = rst % 1
+
+print ('Ao sacar', saque, 'reais, voce receberá:')
+if N100 > 0:
+    print (N100, 'notas de 100')
+if N50 > 0:
+    print (N50, 'notas de 50')
+if N20 > 0:   
+    print (N20, 'notas de 20')
+if N10 > 0:   
+    print (N10, 'notas de 10')
+if N5 > 0:   
+    print (N5, 'notas de 5')
+if N2 > 0:   
+    print (N2, 'notas de 2')
+if N1 > 0:
+    print (N1, 'notas de 1')
