@@ -1,0 +1,23 @@
+const val=[100,50,20,10,5,2]
+var valor=80 // variavel responsavel para definir a quantidade que o usuario deseja retirar 
+
+var temp,x
+var quant=[0,0,0,0,0,0]
+
+console.log("valor a ser retirado:", valor)
+if ((valor%2)!=0 && valor>=5){
+    valor=valor-5
+    quant[4]++
+}
+for (x=0;x<6;x++){
+    if (valor >(valor%val[x]) ){
+        temp=valor%val[x]
+        quant[x]=(valor-temp)/val[x]
+        //console.log("val ",valor,"**","temp ",temp,"**","quantx ",quant[x],"\n")
+        valor=temp
+    }
+}
+for (x=0;x<6;x++){
+    if(quant[x]!=0)
+    console.log("notas de R$",val[x],"-",quant[x])
+}
