@@ -1,0 +1,24 @@
+function saque(valor){
+	var notas = [0,0,0,0,0,0];
+	var valorAtual = valor;
+	var valorOriginal = valor;
+
+	notas[5] = valorOriginal / 100;
+	valorAtual = valorOriginal % 100;
+	notas[4] = valorAtual / 50;
+	valorAtual = valorAtual % 50;
+	notas[3] =  valorAtual / 20;
+	valorAtual = valorAtual % 20;
+	notas[2] = valorAtual / 10;
+	valorAtual = valorAtual % 10;
+	notas[1] = valorAtual / 5;
+	valorAtual = valorAtual % 5;
+	notas[0] = valorAtual / 2;
+
+	console.log("São necessárias:\n");
+	console.log(Math.floor(notas[5]) + "  Notas de R$100,00\n" + Math.floor(notas[4]) + "  Notas de R$50,00\n" + Math.floor(notas[3]) + "  Notas de R$20,00\n" + Math.floor(notas[2]) + "  Notas de R$10,00\n" + Math.floor(notas[1]) + "  Notas de R$5,00");
+	console.log(Math.floor(notas[0]) + "  Notas de R$2,00\n")
+}
+
+saque(process.argv[2]);
+
