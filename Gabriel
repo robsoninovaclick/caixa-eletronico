@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main()
+{
+	setlocale(LC_ALL, "Portuguese");
+	int saque = 0;
+
+	do
+	{
+		printf("\nInforme o valor que vai ser sacado: ");
+		scanf("%d",&saque);
+
+		if (saque <= 0) printf("\nNão é possível sacar esse valor.");
+		else if (saque % 1 == 0) break;
+		else printf("\nVocê não pode sacar %d.",saque);
+	} while (0 == 0);
+
+	printf("\nVocê sacou %d reais. ",saque);
+	
+	printf("\n%d notas de 100",saque / 100);
+	saque = saque % 100;
+	printf("\n%d notas de 50",saque / 50);
+	saque = saque % 50;
+	printf("\n%d notas de 20",saque / 20);
+	saque = saque % 20;
+	printf("\n%d notas de 10",saque / 10);
+	saque = saque % 10;
+	printf("\n%d notas de 5",saque / 5);
+	saque = saque % 5;
+	printf("\n%d notas de 2",saque / 2);
+	saque = saque % 2;
+	printf("\n%d notas de 1", saque /1);
+	saque = saque % 1;
+
+
+}
