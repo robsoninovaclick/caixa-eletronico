@@ -1,4 +1,4 @@
-const sacarDInheiro =  function (valorASerSacado) {
+const sacarDinheiro =  function (valorASerSacado) {
 
     let cedulasARetornar = {'100' : 0.0, '50' : 0.0, '20' : 0.0, '10' : 0.0, '5' : 0.0, '2' : 0.0};
     let valor = valorASerSacado;
@@ -13,5 +13,5 @@ const sacarDInheiro =  function (valorASerSacado) {
             cedulasARetornar[cedulasValidas[i]] = quantidadeCedulas;
         }
     }
-    console.log(cedulasARetornar);
+    return cedulasARetornar;
 }
