@@ -1,38 +1,62 @@
-const menorQtdCedula = (valor) => {
+const menorQtdCedula = valor => {
     let i = valor;
-    let quantidadeCedulas = 0;
+    const valorEQuantidadeCedulas = {}
     while(i > 0) {
         /*Caso considere a nota de 200 reais nova
         if(i >= 200) {
-            quantidadeCedulas++;
+            if(!!valorEQuantidadeCedulas["200"])
+                valorEQuantidadeCedulas["200"]++;
+            else
+                valorEQuantidadeCedulas["200"] = 1;
             i -= 200;
         }
-        else */if(i >= 100) {
-            quantidadeCedulas++;
+        /*else */if(i >= 100) {
+            if(!!valorEQuantidadeCedulas["100"])
+                valorEQuantidadeCedulas["100"]++;
+            else
+                valorEQuantidadeCedulas["100"] = 1;     
             i -= 100;
         } else if (i >= 50) {
-            quantidadeCedulas++;
+            if(!!valorEQuantidadeCedulas["50"])
+                valorEQuantidadeCedulas["50"]++;
+            else
+                valorEQuantidadeCedulas["50"] = 1;
             i -= 50;
         } else if (i >= 20) {
-            quantidadeCedulas++;
+            if(!!valorEQuantidadeCedulas["20"])
+                valorEQuantidadeCedulas["20"]++;
+            else
+                valorEQuantidadeCedulas["20"] = 1;
             i -= 20;
         } else if (i >= 10) {
-            quantidadeCedulas++;
+            if(!!valorEQuantidadeCedulas["10"])
+                valorEQuantidadeCedulas["10"]++;
+            else
+                valorEQuantidadeCedulas["10"] = 1;
             i -= 10;
         } else if (i >= 5) {
-            quantidadeCedulas++;
+            if(!!valorEQuantidadeCedulas["5"])
+                valorEQuantidadeCedulas["5"]++;
+            else
+                valorEQuantidadeCedulas["5"] = 1;
             i -= 5;
         } else if (i >= 2) {
-            quantidadeCedulas ++;
+            if(!!valorEQuantidadeCedulas["2"])
+                valorEQuantidadeCedulas["2"]++;
+            else
+                valorEQuantidadeCedulas["2"] = 1;
             i -= 2;
         } else {                    //Considerando que existe nota de um real.
-            quantidadeCedulas++;
+            if(!!valorEQuantidadeCedulas["1"])
+                valorEQuantidadeCedulas["1"]++;
+            else
+                valorEQuantidadeCedulas["1"] = 1;
             i -= 1;
         }
     }
-    // Teste para ver se estava retornando certo.
-    // console.log(quantidadeCedulas);
-    return quantidadeCedulas;
+    // Printa no console a quantidade 
+    // console.log(valorEQuantidadeCedulas)
+    return valorEQuantidadeCedulas;
 }
 
 
